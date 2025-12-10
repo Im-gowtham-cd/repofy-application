@@ -19,8 +19,14 @@ export default function Login() {
             <i className="bxl bx-github" />
           </div>
           <p className={LoginStyle.register}>Don't have an account? <a href="/register">Register</a></p>
+          <p className={LoginStyle.register}><a href="/register">Forgot Password ?</a></p>
         </form>
-
+        <ul className={LoginStyle.users}>
+          <li className={LoginStyle.user}></li>
+          <li className={LoginStyle.user}></li>
+          <li className={LoginStyle.user}></li>
+          <li className={LoginStyle.user}>68+Users</li>
+        </ul>
       </div>
     </>
   )

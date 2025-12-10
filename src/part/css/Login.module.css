@@ -8,106 +8,107 @@
   src: url('../../assets/font/Paterna.otf');
 }
 
-.loginForm{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg);
-    /* border: 1px solid var(--bg); */
-    position: relative;
-    gap: 20px;
-    flex-direction: column;
+.loginForm {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  /* border: 1px solid var(--bg); */
+  position: relative;
+  gap: 15px;
+  flex-direction: column;
 }
 
-.border{
-    position: absolute;
-    height:250px;
-    width: 250px;
-    right: 0;
-    bottom: 0;
+.border {
+  position: absolute;
+  height: 250px;
+  width: 250px;
 }
 
-.border:nth-child(2){
-    position: absolute;
-    height:250px;
-    width: 250px;
-    left: 0;
-    top: 0;
-    transform: rotate(180deg);
+.border:nth-child(1) {
+  right: 0;
+  bottom: 0;
 }
 
-.Form{
-    height: 420px;
-    /* border: 1px solid var(--fg); */
-    /* background-color: var(--bgw); */
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    /* margin-left: 150px; */
-    /* justify-content: center; */
-    align-items: center;
-    margin-top: 30px;
+.border:nth-child(2) {
+  left: 0;
+  top: 0;
+  transform: rotate(180deg);
 }
 
-.title{
-    font-family: 'Santa';
-    font-size: 150px;
-    color: var(--fg);
-    height: 100px;
-    width: 100%;
-    /* border: 1px solid var(--fg); */
-    display: flex;
-    justify-content: center;
-    /* margin-right: 200px; */
-    align-items: center;
+.Form {
+  height: 450px;
+  /* border: 1px solid var(--fg); */
+  /* background-color: var(--bgw); */
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  /* margin-left: 150px; */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
 
-input{
-    height: 50px;
-    width: 500px;
-    /* margin-bottom: 20px; */
-    /* padding-left: 20px; */
-    font-family: 'Pat';
-    font-size: 14px;
-    background-color: var(--bgw);
-    color: var(--fg);
-    outline: none;
-    padding: 0 40px;
-    /* position: relative; */
-    /* border-radius: 50px; */
-    border: none;
-    /* border: 1px solid var(--fg); */
+.title {
+  font-family: 'Santa';
+  font-size: 150px;
+  color: var(--fg);
+  height: 100px;
+  width: 100%;
+  /* border: 1px solid var(--fg); */
+  display: flex;
+  justify-content: center;
+  /* margin-right: 200px; */
+  align-items: center;
 }
 
-input[type="submit"]{
-    /* margin-bottom: 0; */
-    padding: 0 40px;
-    width: 580px;
+input {
+  height: 50px;
+  width: 500px;
+  /* margin-bottom: 20px; */
+  /* padding-left: 20px; */
+  font-family: 'Pat';
+  font-size: 14px;
+  background-color: var(--bgw);
+  color: var(--fg);
+  outline: none;
+  padding: 0 40px;
+  /* position: relative; */
+  /* border-radius: 50px; */
+  border: none;
+  /* border: 1px solid var(--fg); */
 }
-span{
+
+input[type="submit"] {
+  /* margin-bottom: 0; */
+  padding: 0 40px;
+  width: 580px;
+}
+
+span {
   z-index: 1;
-    position: relative;
+  position: relative;
 }
 
-span::before{
-    content: '';
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    z-index: -1;
-    bottom: -10px;
-    left: -10px;
-    background-color: var(--fg);
+span::before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  z-index: -1;
+  bottom: -10px;
+  left: -10px;
+  background-color: var(--fg);
 }
 
-input::placeholder{
-    color: var(--fg);
+input::placeholder {
+  color: var(--fg);
 }
 
-.or{
+.or {
   font-size: 30px;
   font-family: 'Santa';
   margin-top: 30px;
@@ -117,42 +118,112 @@ input::placeholder{
   align-items: center; */
 }
 
-.or::before{
+.or::before {
   content: '';
   position: absolute;
   height: 10px;
   width: 100px;
   z-index: -1;
-  bottom: 10px; 
+  bottom: 10px;
   left: -120px;
   background-color: var(--fg);
 }
 
-.or::after{
+.or::after {
   content: '';
   position: absolute;
   height: 10px;
   width: 100px;
   z-index: -1;
-  bottom: 10px; 
+  bottom: 10px;
   right: -120px;
   background-color: var(--fg);
 }
 
-.plat{
+.plat {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
 
-.plat i{
+.plat i {
   font-size: 30px;
   color: var(--fg);
 }
 
-.register{
+.register {
   font-size: 21px;
   font-family: 'Santa';
   color: var(--fg);
+}
+
+.users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100px;
+  width: 400px;
+  /* border: 1px solid var(--fg); */
+  position: relative;
+  list-style: none;
+}
+
+.user:last-child {
+  position: absolute;
+  font-size: 21px;
+  font-family: 'Santa';
+  left: calc(70% - 70px);
+  color: var(--fg);
+}
+
+.user:first-child {
+  height: 70px;
+  position: absolute;
+  width: 70px;
+  border-radius: 50%;
+  left: calc(40% - 70px);
+  background-color: var(--pi);
+}
+
+.user:nth-child(2) {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  left: calc(50% - 70px);
+  border-radius: 50%;
+  background-color: var(--p);
+}
+
+.user:nth-child(3) {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  left: calc(60% - 70px);
+  border-radius: 50%;
+  background-color: var(--pin);
+}
+
+@media screen and (max-width: 768px) {
+  .Form {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 100px;
+  }
+
+  .border {
+    height: 150px;
+    width: 150px;
+  }
+
+  input {
+    width: 300px;
+  }
+
+  input[type="submit"] {
+    width: 380px;
+  }
 }

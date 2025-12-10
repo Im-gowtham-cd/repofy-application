@@ -67,7 +67,7 @@
 body {
   margin: 0;
   letter-spacing: 2px;
-  display: flex;
+  /* display: flex; */
   /* place-items: center; */
   height: 100vh;
   background-color: var(--fg);
