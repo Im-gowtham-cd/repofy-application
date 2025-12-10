@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #00ED64;
+  --fg: #000000;
+  --bgw: #f5f5f5;
+  --p: #c300ff;
+  --pi : #ff00f7;
+  --bpi: #ff00f728;
+  --bp: #d000ff1f;
+  --pin: #ffd900;
+}
+
+@font-face {
+  font-family: 'Luck';
+  src: url('./assets/font/LuckiestGuy.ttf');
+}
+
+@font-face {
+  font-family: 'Biz';
+  src: url('./assets/font/Bizantheum.otf');
+}
+
+@font-face {
+  font-family: 'Santa';
+  src: url('./assets/font/Santa\ Unicorn.ttf');
+}
+
+@font-face {
+  font-family: 'Valen';
+  src: url('./assets/font/Wonderful\ Valentine.ttf');
+}
+
+@font-face {
+  font-family: 'Ais';
+  src: url('./assets/font/Aisling-FreeDemo.otf');
+}
+
+@font-face {
+  font-family: 'Str';
+  src: url('./assets/font/StretchPro.ttf');
+}
+
+@font-face {
+  font-family: 'Pro';
+  src: url('./assets/font/Pronell.otf');
+}
+
+@font-face {
+  font-family: 'Milk';
+  src: url('./assets/font/Milker.otf');
+}
+
+@font-face {
+  font-family: 'Com';
+  src: url('./assets/font/Comero\ Baroque.ttf');
+}
+
+@font-face {
+  font-family: 'Pat';
+  src: url('./assets/font/Paterna.otf');
+}
+
+body {
+  margin: 0;
+  letter-spacing: 2px;
+  display: flex;
+  /* place-items: center; */
+  height: 100vh;
+  background-color: var(--fg);
+  /* cursor: none; */
+}

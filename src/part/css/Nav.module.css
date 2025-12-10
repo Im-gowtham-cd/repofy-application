@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Biz';
+  src: url('../../assets/font/Bizantheum.otf');
+}
+
+nav {
+  display: flex;
+  /* border: 1px solid rgb(255, 255, 255); */
+  height: 20vh;
+  width: 100vw;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  gap: 20px;
+  /* justify-content: center; */
+  /* position: relative; */
+  /* background: var(--bgw); */
+}
+
+.navTitle {
+  font-family: 'Biz';
+  font-size: 75px;
+  font-weight: 1800;
+  position: relative;
+  color: var(--bg);
+  /* background-color: var(--bg); */
+  padding: 10px 20px;
+  /* box-shadow: 4px -3px 0px 2px var(--fg); */
+}
+
+/* .navTitle::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  width: 135px;
+  height: 53px;
+  background-color: var(--bgw);
+  z-index: -1;
+}
+
+.navTitle::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 23px;
+  background-color: var(--bgw);
+  z-index: -1;
+} */

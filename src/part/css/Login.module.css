@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'Santa';
+  src: url('../../assets/font/Santa\ Unicorn.ttf');
+}
+
+@font-face {
+  font-family: 'Pat';
+  src: url('../../assets/font/Paterna.otf');
+}
+
+.loginForm{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    /* border: 1px solid var(--bg); */
+    position: relative;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.border{
+    position: absolute;
+    height:250px;
+    width: 250px;
+    right: 0;
+    bottom: 0;
+}
+
+.border:nth-child(2){
+    position: absolute;
+    height:250px;
+    width: 250px;
+    left: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.Form{
+    height: 420px;
+    /* border: 1px solid var(--fg); */
+    /* background-color: var(--bgw); */
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* margin-left: 150px; */
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 30px;
+}
+
+.title{
+    font-family: 'Santa';
+    font-size: 150px;
+    color: var(--fg);
+    height: 100px;
+    width: 100%;
+    /* border: 1px solid var(--fg); */
+    display: flex;
+    justify-content: center;
+    /* margin-right: 200px; */
+    align-items: center;
+}
+
+input{
+    height: 50px;
+    width: 500px;
+    /* margin-bottom: 20px; */
+    /* padding-left: 20px; */
+    font-family: 'Pat';
+    font-size: 14px;
+    background-color: var(--bgw);
+    color: var(--fg);
+    outline: none;
+    padding: 0 40px;
+    /* position: relative; */
+    /* border-radius: 50px; */
+    border: none;
+    /* border: 1px solid var(--fg); */
+}
+
+input[type="submit"]{
+    /* margin-bottom: 0; */
+    padding: 0 40px;
+    width: 580px;
+}
+span{
+  z-index: 1;
+    position: relative;
+}
+
+span::before{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    z-index: -1;
+    bottom: -10px;
+    left: -10px;
+    background-color: var(--fg);
+}
+
+input::placeholder{
+    color: var(--fg);
+}
+
+.or{
+  font-size: 30px;
+  font-family: 'Santa';
+  margin-top: 30px;
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.or::before{
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  z-index: -1;
+  bottom: 10px; 
+  left: -120px;
+  background-color: var(--fg);
+}
+
+.or::after{
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  z-index: -1;
+  bottom: 10px; 
+  right: -120px;
+  background-color: var(--fg);
+}
+
+.plat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.plat i{
+  font-size: 30px;
+  color: var(--fg);
+}
+
+.register{
+  font-size: 21px;
+  font-family: 'Santa';
+  color: var(--fg);
+}
