@@ -70,7 +70,7 @@ input {
   width: 500px;
   /* margin-bottom: 20px; */
   /* padding-left: 20px; */
-  font-family: 'Pat';
+  font-family: 'Poppins';
   font-size: 14px;
   background-color: var(--bgw);
   color: var(--fg);
@@ -86,6 +86,11 @@ input[type="submit"] {
   /* margin-bottom: 0; */
   padding: 0 40px;
   width: 580px;
+}
+
+input[type="submit"]:active{
+  transform: scale(0.92);
+  transition: transform 0.3s ease-in-out;
 }
 
 span {
