@@ -1,0 +1,19 @@
+directories:
+  output: dist_electron
+  buildResources: build
+appId: com.gotamu.repofy
+productName: Repofy
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+extraResources:
+  - from: dist
+    to: dist
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+electronVersion: 39.2.6
