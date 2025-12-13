@@ -11,10 +11,11 @@ function createWindow() {
   });
 
   if (process.env.NODE_ENV === "development") {
-    win.loadURL("https://repofy-application.vercel.app/");
+    win.loadURL("http://localhost:5713");
     // win.webContents.openDevTools();
   } else {
-    win.loadFile(path.join(__dirname, "../dist/index.html"));
+    // win.loadFile(path.join(__dirname, "../dist/index.html"));
+    win.loadURL("https://repofy-application.vercel.app/");
   }
 }
 

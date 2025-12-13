@@ -32,5 +32,30 @@
     "globals": "^16.5.0",
     "vite": "^7.2.4",
     "wait-on": "^9.0.3"
+  },
+  "build": {
+    "appId": "com.gotamu.repofy",
+    "productName": "Repofy",
+    "directories": {
+      "output": "dist_electron",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "dist",
+        "to": "dist"
+      }
+    ],
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
   }
 }
