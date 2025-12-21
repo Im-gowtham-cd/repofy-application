@@ -71,8 +71,8 @@ export default function Login() {
     e.preventDefault()
 
     try {
-      // const result = await fetch("https://repofybackend-production.up.railway.app/signup", {
-      const result = await fetch("http://localhost:8080/signup", {
+      const result = await fetch("https://repofybackend-production.up.railway.app/signup", {
+      // const result = await fetch("http://localhost:8080/signup", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
