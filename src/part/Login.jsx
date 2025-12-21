@@ -64,6 +64,7 @@ export default function Login() {
   return (
     <>
       <div className={LoginStyle.loginForm}>
+
         {/* <img src={i1} alt="" className={LoginStyle.border} /> */}
         {/* <img src={i1} alt="" className={LoginStyle.border} /> */}
 
@@ -133,6 +134,10 @@ export default function Login() {
           <li className={LoginStyle.user}></li>
           <li className={LoginStyle.user}>68+Users</li>
         </ul>
+
+        <div className={LoginStyle.UserAlertContainer}>
+
+        </div>
       </div>
     </>
   )
