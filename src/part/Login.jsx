@@ -4,7 +4,10 @@ import i1 from '../assets/image/border.png'
 
 export default function Login() {
 
-  const [user, setUser] = useState({})
+  const [message, setMessage] = useState("")
+  const [AlertSuccessMsg, setAlertSuccessMsg] = useState(false)
+  const [AlertFailMsg, setAlertFailMsg] = useState(false)
+  // const [user, setUser] = useState({})
   const [login, setLogin] = useState(true)
   const [data, setData] = useState({
     name: "",
@@ -18,25 +21,58 @@ export default function Login() {
     })
   }
 
-  const Login = async e => {
+  const Login = async (e) => {
     e.preventDefault()
+
+    setAlertFailMsg(false)
+    setAlertSuccessMsg(false)
+
     try {
-      const result = await fetch(`https://repofybackend-production.up.railway.app/login/${data.email}`)
-      const userData = await result.json()
-      // setUser(userData)
-      if (userData.password === data.password) alert("Success !")
-      else alert("Error !")
-    }
-    catch (err) {
+      const result = await fetch(`http://localhost:8080/login/${data.email}`)
+      const user = await result.json()
+
+      if (!result.ok) {
+        setMessage(user.message)
+        setAlertFailMsg(true)
+        setTimeout(() => {
+          setAlertFailMsg(false)
+        }, 5000);
+        return
+      }
+
+      if (user.password !== data.password) {
+        setMessage("Incorrect password 🥲")
+        setAlertFailMsg(true)
+        setTimeout(() => {
+          setAlertFailMsg(false)
+        }, 5000);
+        return
+      }
+
+      setMessage("Login successful 😁👌")
+      setAlertSuccessMsg(true)
+      setTimeout(() => {
+        setAlertSuccessMsg(false)
+      }, 5000);
+      return
+
+    } catch (err) {
       console.error(err)
+      setMessage("Server Error ... 😅")
+      setAlertFailMsg(true)
+      setTimeout(() => {
+        setAlertFailMsg(false)
+      }, 5000)
     }
   }
+
 
   const Register = async e => {
     e.preventDefault()
 
     try {
-      const result = await fetch("https://repofybackend-production.up.railway.app/signup", {
+      // const result = await fetch("https://repofybackend-production.up.railway.app/signup", {
+      const result = await fetch("http://localhost:8080/signup", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
@@ -135,9 +171,26 @@ export default function Login() {
           <li className={LoginStyle.user}>68+Users</li>
         </ul>
 
-        <div className={LoginStyle.UserAlertContainer}>
+        {
+          AlertSuccessMsg ? (
+            <div className={LoginStyle.UserAlertSuccessContainer}>
+              <p className={LoginStyle.UserAlertSuccess}>{message}</p>
+            </div>
+          ) : (
+            <></>
+          )
+        }
 
-        </div>
+        {
+          AlertFailMsg ? (
+            <div className={LoginStyle.UserAlertFailContainer}>
+              <p className={LoginStyle.UserAlertFail}>{message}</p>
+            </div>
+          ) : (
+            <></>
+          )
+        }
+
       </div>
     </>
   )
