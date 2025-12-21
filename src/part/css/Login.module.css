@@ -8,6 +8,122 @@
   src: url('../../assets/font/Paterna.otf');
 }
 
+.infiniteScroll {
+  position: absolute;
+  height: 100vh;
+  width: 5%;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+}
+
+.infiniteScroll:nth-child(1) {
+  left: 0;
+}
+
+.infiniteScroll:nth-child(2) {
+  right: 0;
+}
+
+/* .infiniteScrollContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: infiniteScrollLeft 10s linear infinite;
+} */
+
+.infiniteScroll:nth-child(1) .infiniteScrollContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 100px; */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: infiniteScrollLeft 10s linear infinite;
+}
+
+.infiniteScroll:nth-child(2) .infiniteScrollContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 100px; */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: infiniteScrollRight 10s linear infinite;
+}
+
+.infiniteScroll:nth-child(2) .infiniteScrollContent li{
+  margin-bottom: 0px;
+  margin-top: 90px;
+}
+
+@keyframes infiniteScrollLeft {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes infiniteScrollRight {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.infiniteScrollContent li {
+  height: 100px;
+  width: 170px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Santa", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 90px;
+  transform: rotate(270deg);
+  white-space: nowrap;
+}
+
+.infiniteScrollContent li:nth-child(5n+1) {
+  background-color: var(--p);
+  color: var(--fg);
+}
+
+.infiniteScrollContent li:nth-child(5n+2) {
+  background-color: var(--pin);
+  color: var(--fg);
+}
+
+.infiniteScrollContent li:nth-child(5n+3) {
+  background-color: var(--pi);
+  color: var(--fg);
+}
+
+.infiniteScrollContent li:nth-child(5n+4) {
+  background-color: var(--fg);
+  color: var(--bgw);
+}
+
+.infiniteScrollContent li:nth-child(5n+5) {
+  background-color: var(--bgw);
+  color: var(--fg);
+}
 .loginForm {
   height: 100vh;
   width: 100vw;
@@ -86,11 +202,19 @@ input[type="submit"] {
   /* margin-bottom: 0; */
   padding: 0 40px;
   width: 580px;
+  background-color: var(--pin);
+  color: var(--fg);
 }
 
 input[type="submit"]:active{
   transform: scale(0.92);
   transition: transform 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover{
+  /* background-color: var(--pin); */
+  scale: 1.03;
+  transition: scale 0.2s ease-in-out;
 }
 
 span {
@@ -104,8 +228,9 @@ span::before {
   height: 50px;
   width: 100%;
   z-index: -1;
-  bottom: -10px;
-  left: -10px;
+  border-radius: 7px;
+  bottom: -7px;
+  /* left: -10px; */
   background-color: var(--fg);
 }
 

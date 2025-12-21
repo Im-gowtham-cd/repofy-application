@@ -59,11 +59,42 @@ export default function Login() {
     }
   }
 
+  const items = ["Repofy", "Repofy", "Repofy", "Repofy", "Repofy"];
+
   return (
     <>
       <div className={LoginStyle.loginForm}>
-        <img src={i1} alt="" className={LoginStyle.border} />
-        <img src={i1} alt="" className={LoginStyle.border} />
+        {/* <img src={i1} alt="" className={LoginStyle.border} /> */}
+        {/* <img src={i1} alt="" className={LoginStyle.border} /> */}
+
+        <div className={LoginStyle.infiniteScroll}>
+          {[1, 2].map((_, index) => (
+            <ul
+              key={index}
+              aria-hidden={index === 1}
+              className={LoginStyle.infiniteScrollContent}
+            >
+              {items.map((text, i) => (
+                <li key={i}>{text}</li>
+              ))}
+            </ul>
+          ))}
+        </div>
+
+        <div className={LoginStyle.infiniteScroll}>
+          {[1, 2].map((_, index) => (
+            <ul
+              key={index}
+              aria-hidden={index === 1}
+              className={LoginStyle.infiniteScrollContent}
+            >
+              {items.map((text, i) => (
+                <li key={i}>{text}</li>
+              ))}
+            </ul>
+          ))}
+        </div>
+
         <h1 className={LoginStyle.title}>Repofy</h1>
 
         {login ? (
