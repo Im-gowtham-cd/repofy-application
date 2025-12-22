@@ -29,7 +29,7 @@ export default function Login() {
 
     try {
       // const result = await fetch(`http://localhost:8080/login/${data.email}`)
-      const result = await fetch(`https://repofybackend-production.up.railway.app/${data.email}`)
+      const result = await fetch(`https://repofybackend-production.up.railway.app/login/${data.email}`)
       const user = await result.json()
 
       if (!result.ok) {
