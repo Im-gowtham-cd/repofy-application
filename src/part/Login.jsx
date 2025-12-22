@@ -81,8 +81,16 @@ export default function Login() {
         body: JSON.stringify(data)
       })
 
-      const newUser = result.json()
-      console.log(newUser)
+      // const newUser = result.json()
+      // console.log(newUser)
+
+      setMessage("Register successful 😁👌")
+      setAlertSuccessMsg(true)
+      setTimeout(() => {
+        setAlertSuccessMsg(false)
+        setLogin(true)
+      }, 1000);
+      // setLogin(true)
 
       setData({
         name: "",

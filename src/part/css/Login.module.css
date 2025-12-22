@@ -13,6 +13,11 @@
   src: url('../../assets/font/Yomanica-Regular.otf');
 }
 
+@font-face {
+  font-family: "Fyp";
+  src: url('../../assets/font/FujiFantastic-Bold.otf');
+}
+
 
 .infiniteScroll {
   position: absolute;
@@ -178,10 +183,10 @@
 }
 
 .title {
-  font-family: 'Yom';
-  letter-spacing: -10px;
-  font-size: 150px;
-  color: var(--pi);
+  font-family: 'Fyp';
+  letter-spacing: 5px;
+  font-size: 165px;
+  color: var(--p);
   height: 100px;
   width: 100%;
   /* border: 1px solid var(--fg); */
@@ -360,7 +365,7 @@ input::placeholder {
   /* border: 2px solid var(--p); */
   background: var(--p);
   bottom: 50px;
-  animation: Msg 0.3s linear;
+  animation: Msg 0.2s ease-in-out;
 }
 
 .UserAlertSuccess {
@@ -382,7 +387,8 @@ input::placeholder {
   background: #ff2323;
   bottom: 50px;
   /* z-index: -10; */
-  animation: Msg 0.3s linear;
+  animation: Msg 0.1s ease-in-out;
+
 }
 
 @keyframes Msg {
