@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LoginStyle from './css/Login.module.css'
-import i1 from '../assets/image/border.png'
+import Home from './Home';
+
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
 
-  const [message, setMessage] = useState("")
-  const [AlertSuccessMsg, setAlertSuccessMsg] = useState(false)
-  const [AlertFailMsg, setAlertFailMsg] = useState(false)
-  // const [user, setUser] = useState({})
-  const [login, setLogin] = useState(true)
+  const [message, setMessage] = useState("");
+  const [AlertSuccessMsg, setAlertSuccessMsg] = useState(false);
+  const [AlertFailMsg, setAlertFailMsg] = useState(false);
+  const [user, setUser] = useState("");
+  const [login, setLogin] = useState(true);
   const [data, setData] = useState({
     name: "",
     email: "",
     password: ""
-  })
+  });
+  const navigate = useNavigate();
 
   const dataEntry = async e => {
     setData({
@@ -54,6 +57,7 @@ export default function Login() {
       setAlertSuccessMsg(true)
       setTimeout(() => {
         setAlertSuccessMsg(false)
+        navigate('/home')
       }, 5000);
       return
 
@@ -106,6 +110,20 @@ export default function Login() {
 
   const items = ["Repofy", "Repofy", "Repofy", "Repofy", "Repofy"];
 
+  useEffect(() => {
+    const TotalUser = async () => {
+      try {
+        // const result = await fetch("http://localhost:8080/totaluser")
+        const result = await fetch("https://repofybackend-production.up.railway.app/totaluser")
+        setUser(await result.json())
+      } catch (err) {
+        console.error(err)
+      }
+    }
+    TotalUser()
+  }, [])
+
+
   return (
     <>
       <div className={LoginStyle.loginForm}>
@@ -145,8 +163,8 @@ export default function Login() {
 
         {login ? (
           <form onSubmit={Login} className={LoginStyle.Form}>
-            <span className={LoginStyle.span}><input type="email" name="email" id="" placeholder='Email' className={LoginStyle.input} onChange={dataEntry} /></span>
-            <span className={LoginStyle.span}><input type="password" name="password" id="" placeholder='Password' className={LoginStyle.input} onChange={dataEntry} /></span>
+            <span className={LoginStyle.span}><input type="email" name="email" id="" placeholder='Email' className={LoginStyle.input} onChange={dataEntry} required /></span>
+            <span className={LoginStyle.span}><input type="password" name="password" id="" placeholder='Password' className={LoginStyle.input} onChange={dataEntry} required /></span>
             <span className={LoginStyle.span}><input type="submit" value="Login" className={LoginStyle.input} /></span>
             <span className={LoginStyle.or}>Or</span>
             <div className={LoginStyle.plat}>
@@ -159,9 +177,9 @@ export default function Login() {
           </form>
         ) : (
           <form onSubmit={Register} className={LoginStyle.Form}>
-            <span className={LoginStyle.span}><input type="text" name="name" id="" placeholder='Name' className={LoginStyle.input} onChange={dataEntry} /></span>
-            <span className={LoginStyle.span}><input type="email" name="email" id="" placeholder='Email' className={LoginStyle.input} onChange={dataEntry} /></span>
-            <span className={LoginStyle.span}><input type="password" name="password" id="" placeholder='Password' className={LoginStyle.input} onChange={dataEntry} /></span>
+            <span className={LoginStyle.span}><input type="text" name="name" id="" placeholder='Name' className={LoginStyle.input} onChange={dataEntry} required /></span>
+            <span className={LoginStyle.span}><input type="email" name="email" id="" placeholder='Email' className={LoginStyle.input} onChange={dataEntry} required /></span>
+            <span className={LoginStyle.span}><input type="password" name="password" id="" placeholder='Password' className={LoginStyle.input} onChange={dataEntry} required /></span>
             <span className={LoginStyle.span}><input type="submit" value="Sign Up" className={LoginStyle.input} /></span>
             <span className={LoginStyle.or}>Or</span>
             <div className={LoginStyle.plat}>
@@ -177,7 +195,7 @@ export default function Login() {
           <li className={LoginStyle.user}></li>
           <li className={LoginStyle.user}></li>
           <li className={LoginStyle.user}></li>
-          <li className={LoginStyle.user}>68+Users</li>
+          <li className={LoginStyle.user}>{user} Users</li>
         </ul>
 
         {

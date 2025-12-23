@@ -1,9 +1,15 @@
 import Login from './part/Login'
+import Home from './part/Home'
+import { Routes, Route } from 'react-router-dom'
 
 export default function App() {
   return (
     <>
-      <Login/>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/home' element={<Home />} />
+      </Routes>
+      <Login />
     </>
   )
 }
