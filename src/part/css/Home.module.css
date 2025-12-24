@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Santa';
+  src: url('../../assets/font/Santa\ Unicorn.ttf');
+}
+@font-face {
+  font-family: 'Pat';
+  src: url('../../assets/font/Paterna.otf');
+}
+@font-face {
+  font-family: "Yom";
+  src: url('../../assets/font/Yomanica-Regular.otf');
+}
+@font-face {
+  font-family: "Fyp";
+  src: url('../../assets/font/FujiFantastic-Bold.otf');
+}
+
+.HomeSection{
+    height: 100vh;
+    width: 100vw;
+    background: var(--bgw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.WelcomeText{
+    font-family: "Fyp";
+    font-size: 80px;
+}

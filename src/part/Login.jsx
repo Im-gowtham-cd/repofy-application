@@ -57,8 +57,8 @@ export default function Login() {
       setAlertSuccessMsg(true)
       setTimeout(() => {
         setAlertSuccessMsg(false)
-        navigate('/home')
-      }, 5000);
+        navigate(`/home/${user.name}`)
+      }, 1000);
       return
 
     } catch (err) {
@@ -179,7 +179,7 @@ export default function Login() {
           <form onSubmit={Register} className={LoginStyle.Form}>
             <span className={LoginStyle.span}><input type="text" name="name" id="" placeholder='Name' className={LoginStyle.input} onChange={dataEntry} required /></span>
             <span className={LoginStyle.span}><input type="email" name="email" id="" placeholder='Email' className={LoginStyle.input} onChange={dataEntry} required /></span>
-            <span className={LoginStyle.span}><input type="password" name="password" id="" placeholder='Password' className={LoginStyle.input} onChange={dataEntry} required /></span>
+            <span className={LoginStyle.span}><input type="password" name="password" id="" placeholder='Password' className={LoginStyle.input} onChange={dataEntry} value={data.password} autoComplete='new-password'required /></span>
             <span className={LoginStyle.span}><input type="submit" value="Sign Up" className={LoginStyle.input} /></span>
             <span className={LoginStyle.or}>Or</span>
             <div className={LoginStyle.plat}>
