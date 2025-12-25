@@ -22,55 +22,60 @@
   height: 100vh;
   width: 100vw;
   background: var(--pin);
-  /* display: flex; */
+  display: flex;
   /* justify-content: center; */
   /* align-items: center; */
 }
 
-.Nav {
-  height: 12vh;
-  /* border: 1px solid var(--p); */
+.Nav{
+  height: 100vh;
+  width: 20%;
+  /* border: 1px solid var(--fg); */
   display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 75%;
-
-  .navTitle {
-    color: var(--p);
-    font-family: 'Fyp';
-    font-size: 60px;
-  }
-
-  .Logout {
-    color: var(--bgw);
-    font-family: 'Fyp';
-    font-size: 25px;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: linear-gradient(10deg , var(--p),var(--pi));
-  }
-}
-
-.HomeContainer{
-  height: 70vh;
-  border: 1px solid var(--fg);
-  width: 100%;
-}
-
-.WelcomeText {
-  font-family: "Fyp";
-  display: flex;
-  list-style: none;
-  color: var(--p);
-  width: 50%;
-  height: 100%;
   flex-direction: column;
-  border: 1px solid var(--fg);
+  background: orange;
+  position: fixed;
+  align-items: center;
+  /* transform: translateX(-100px); */
 }
 
-.WelcomeText li{ margin-left: 6%;width: fit-content; }
+.navTitle{
+  width: 100%;
+  height: 10%;
+  /* letter-spacing: 1px; */
+  display: grid;
+  place-content: center;
+  /* border: 1px solid var(--fg); */
+  font-family: 'Fyp';
+  font-size: 80px;
+  color: var(--bgw);
+  filter: drop-shadow(4px 4px var(--bgw));
+}
 
-.WelcomeText li:nth-child(1){font-size: 100px;margin-top: 10%;}
-.WelcomeText li:nth-child(2){font-size: 145px; border: 3px solid var(--pi); padding: 20px; background: #c300ff1a;margin-top: 3%;margin-left: 4%;}
+.NameDisplay{
+  width: 100%;
+  height: 10%;
+  border: 1px solid var(--fg);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 2%;
+  font-size: 50px;
+  font-family: 'Fyp';
+  color: var(--p);
+}
+
+.navLink{
+  height: 80%;
+}
+
+.Logout{
+  height: 7%;
+  width: 70%;
+  font-family: 'Fyp';
+  font-size: 21px;
+  background: transparent;
+  color: var(--bgw);
+  border-radius: 50px;
+  border: 5px solid var(--bgw);
+}

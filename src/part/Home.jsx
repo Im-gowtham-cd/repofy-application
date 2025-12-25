@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams , useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import HomeStyle from './css/Home.module.css'
 
 export default function Home() {
@@ -7,25 +7,21 @@ export default function Home() {
 
   const navigate = useNavigate()
 
-  const Logout = () =>{
+  const Logout = () => {
     navigate('/')
   }
 
   return (
     <>
       <div className={HomeStyle.HomeSection}>
+        <h1 className={HomeStyle.NameDisplay}>Welcome , {name}</h1>
         <nav className={HomeStyle.Nav}>
           <h1 className={HomeStyle.navTitle}>Repofy</h1>
+          <ul className={HomeStyle.navLink}>
+
+          </ul>
           <button className={HomeStyle.Logout} onClick={Logout}>LogOut</button>
         </nav>
-
-        <div className={HomeStyle.HomeContainer}>
-          <ul className={HomeStyle.WelcomeText}>
-            <li>Welcome , </li>
-            <li>{name}</li>
-          </ul>
-        </div>
-
       </div>
     </>
   )
