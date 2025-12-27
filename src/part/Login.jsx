@@ -31,8 +31,8 @@ export default function Login() {
     setAlertSuccessMsg(false)
 
     try {
-      // const result = await fetch(`http://localhost:8080/login/${data.email}`)
-      const result = await fetch(`https://repofybackend-production.up.railway.app/login/${data.email}`)
+      const result = await fetch(`http://localhost:8080/login/${data.email}`)
+      // const result = await fetch(`https://repofybackend-production.up.railway.app/login/${data.email}`)
       const user = await result.json()
 
       if (!result.ok) {
@@ -76,8 +76,8 @@ export default function Login() {
     e.preventDefault()
 
     try {
-      const result = await fetch("https://repofybackend-production.up.railway.app/signup", {
-      // const result = await fetch("http://localhost:8080/signup", {
+      // const result = await fetch("https://repofybackend-production.up.railway.app/signup", {
+      const result = await fetch("http://localhost:8080/signup", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
@@ -113,8 +113,8 @@ export default function Login() {
   useEffect(() => {
     const TotalUser = async () => {
       try {
-        // const result = await fetch("http://localhost:8080/totaluser")
-        const result = await fetch("https://repofybackend-production.up.railway.app/totaluser")
+        const result = await fetch("http://localhost:8080/totaluser")
+        // const result = await fetch("https://repofybackend-production.up.railway.app/totaluser")
         setUser(await result.json())
       } catch (err) {
         console.error(err)
