@@ -28,7 +28,7 @@
   /* align-items: center; */
 }
 
-.Nav{
+.Nav {
   height: 100%;
   width: 20%;
   /* border: 1px solid var(--fg); */
@@ -40,7 +40,7 @@
   /* transform: translateX(-100px); */
 }
 
-.Nav::after{
+.Nav::after {
   content: '';
   position: absolute;
   height: 94%;
@@ -50,7 +50,7 @@
   background: var(--pin);
 }
 
-.navTitle{
+.navTitle {
   width: 100%;
   height: 10%;
   /* letter-spacing: 1px; */
@@ -60,10 +60,10 @@
   font-family: 'Fyp';
   font-size: 80px;
   color: var(--pin);
-  filter: drop-shadow(4px 4px var(--fg));
+  /* filter: drop-shadow(4px 4px var(--fg)); */
 }
 
-.NameDisplay{
+.NameDisplay {
   width: 100%;
   height: 10%;
   /* border: 1px solid var(--fg); */
@@ -76,7 +76,7 @@
   color: var(--pin);
 }
 
-.navLink{
+.navLink {
   height: 80%;
   width: 100%;
   display: flex;
@@ -86,8 +86,15 @@
   list-style: none;
 }
 
-.navLink li:nth-child(1){width: 100%;font-family: 'Fyp';font-size: 75px;text-align: center;color: var(--pin);}
-.RoomLink{
+.navLink li:nth-child(1) {
+  width: 100%;
+  font-family: 'Fyp';
+  font-size: 75px;
+  text-align: center;
+  color: var(--pin);
+}
+
+.RoomLink {
   height: 15%;
   width: 100%;
   /* border: 1px solid var(--fg); */
@@ -97,12 +104,12 @@
   gap: 10px;
 }
 
-.RoomLink button{
+.RoomLink button {
   width: 35%;
   height: 40%;
 }
 
-.RoomLink button:nth-child(1){
+.RoomLink button:nth-child(1) {
   background-color: var(--pin);
   border: none;
   font-family: 'Fyp';
@@ -110,8 +117,8 @@
   color: var(--p);
 }
 
-.RoomLink button:nth-child(2){
-  border: 1px solid var(--pin);
+.RoomLink button:nth-child(2) {
+  border: 3px solid var(--pin);
   /* border: none; */
   background: transparent;
   font-family: 'Fyp';
@@ -119,7 +126,7 @@
   color: var(--pin);
 }
 
-.Logout{
+.Logout {
   height: 6%;
   width: 70%;
   font-family: 'Fyp';
@@ -128,4 +135,80 @@
   color: var(--pin);
   border-radius: 50px;
   border: 5px solid var(--pin);
+}
+
+.createroomcontainer {
+  position: absolute;
+  height: 96%;
+  width: 96%;
+  top: 2%;
+  left: 2%;
+  z-index: 1;
+  background: var(--bgw);
+  /* transition: all 0.3s ease-in-out; */
+  animation: popup 0.2s ease-in-out;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0.5;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.CloseButton:nth-child(1) {
+  /* border: 3px solid var(--pi); */
+  border: none; 
+  height: 55%;
+  width: 7%;
+  background: var(--pi);
+  font-family: 'Santa';
+  margin-right: 2%;
+  font-size: 30px;
+  /* margin: 10px; */
+  color: var(--bgw);
+}
+
+.CloseButton:nth-child(2) {
+  border: 3px solid var(--pi);
+  /* border: none; */
+  height: 55%;
+  width: 7%;
+  background: transparent;
+  font-family: 'Santa';
+  font-size: 30px;
+  margin-right: 5%;
+  /* margin: 10px; */
+  color: var(--pi);
+}
+
+.RoomTitle {
+  color: var(--pi);
+  width: 98%;
+  /* border: 3px solid var(--pi); */
+  height: 15%;
+  display: flex;
+  align-items: center;
+  font-family: 'Fyp';
+  padding-left: 2%;
+  font-size: 100px;
+}
+
+.RoomContent{
+  height: 75%;
+  border-bottom: 3px solid var(--pi);
+  border-top:3px solid var(--pi);
+  width: 100%;
+}
+
+.RoomSubmit{
+  display: flex;
+  justify-content: flex-end;
+  height: 10%;
+  width: 100%;
+  align-items: center;
 }
