@@ -18,11 +18,15 @@ export default function Home() {
         <nav className={HomeStyle.Nav}>
           <h1 className={HomeStyle.navTitle}>Repofy</h1>
           <ul className={HomeStyle.navLink}>
-
+            <li>Room</li>
+            <ul className={HomeStyle.RoomLink}>
+              <button>Create</button>
+              <button>Join</button>
+            </ul>
           </ul>
           <button className={HomeStyle.Logout} onClick={Logout}>LogOut</button>
         </nav>
-      </div>
+      </div>return
     </>
   )
 }

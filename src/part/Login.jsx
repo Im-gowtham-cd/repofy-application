@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LoginStyle from './css/Login.module.css'
-import Home from './Home';
+// import Home from './Home';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -110,7 +110,7 @@ export default function Login() {
 
   const items = ["Repofy", "Repofy", "Repofy", "Repofy", "Repofy"];
 
-  useEffect(() => {
+  // useEffect(() => {
     const TotalUser = async () => {
       try {
         // const result = await fetch("http://localhost:8080/totaluser")
@@ -121,7 +121,7 @@ export default function Login() {
       }
     }
     TotalUser()
-  }, [])
+  // }, [])
 
 
   return (
