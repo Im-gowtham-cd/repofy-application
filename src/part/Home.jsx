@@ -20,7 +20,9 @@ export default function Home() {
             <div className={HomeStyle.createroomcontainer}>
               <h1 className={HomeStyle.RoomTitle}>Create Room</h1>
               <div className={HomeStyle.RoomContent}>
-
+                  <form action="">
+                    <span>Name</span>
+                  </form>
               </div>
               <ul className={HomeStyle.RoomSubmit}>
                 <button className={HomeStyle.CloseButton} onClick={() => setCreateRoom(false)}>Create</button>

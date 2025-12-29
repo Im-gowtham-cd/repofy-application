@@ -2,14 +2,7 @@
   font-family: 'Santa';
   src: url('../../assets/font/Santa\ Unicorn.ttf');
 }
-@font-face {
-  font-family: 'Pat';
-  src: url('../../assets/font/Paterna.otf');
-}
-@font-face {
-  font-family: "Yom";
-  src: url('../../assets/font/Yomanica-Regular.otf');
-}
+
 @font-face {
   font-family: "Fyp";
   src: url('../../assets/font/FujiFantastic-Bold.otf');
@@ -20,6 +13,7 @@
   src: url('../../assets/font/Poppins-Light.ttf');
 }
 
+/* Infinite Scroll Styles for Login */
 .infiniteScroll {
   position: absolute;
   height: 100vh;
@@ -37,8 +31,13 @@
   }
 }
 
-.infiniteScroll:nth-child(1) { left: 0; }
-.infiniteScroll:nth-child(2) { right: 0; }
+.infiniteScroll:nth-child(1) { 
+  left: 0; 
+}
+
+.infiniteScroll:nth-child(2) { 
+  right: 0; 
+}
 
 .infiniteScroll:nth-child(1) .infiniteScrollContent {
   display: flex;
@@ -83,17 +82,36 @@
   font-weight: 800;
   margin-bottom: 90px;
   transform: rotate(270deg);
-  /* white-space: nowrap; */
   border: 10px solid var(--fg);
   border-radius: 8px;
 }
 
-.infiniteScrollContent li:nth-child(5n+1) { background-color: var(--p); color: var(--fg); }
-.infiniteScrollContent li:nth-child(5n+2) { background-color: var(--pin); color: var(--fg); }
-.infiniteScrollContent li:nth-child(5n+3) { background-color: var(--pi); color: var(--fg); }
-.infiniteScrollContent li:nth-child(5n+4) { background-color: var(--fg); color: var(--bgw); }
-.infiniteScrollContent li:nth-child(5n+5) { background-color: var(--bgw); color: var(--fg); }
+.infiniteScrollContent li:nth-child(5n+1) { 
+  background-color: var(--p); 
+  color: var(--fg); 
+}
 
+.infiniteScrollContent li:nth-child(5n+2) { 
+  background-color: var(--pin); 
+  color: var(--fg); 
+}
+
+.infiniteScrollContent li:nth-child(5n+3) { 
+  background-color: var(--pi); 
+  color: var(--fg); 
+}
+
+.infiniteScrollContent li:nth-child(5n+4) { 
+  background-color: var(--fg); 
+  color: var(--bgw); 
+}
+
+.infiniteScrollContent li:nth-child(5n+5) { 
+  background-color: var(--bgw); 
+  color: var(--fg); 
+}
+
+/* Login Form Styles */
 .loginForm {
   min-height: 100vh;
   width: 100%;
@@ -116,8 +134,16 @@
   pointer-events: none;
 }
 
-.border:nth-child(1) { right: 0; bottom: 0; }
-.border:nth-child(2) { left: 0; top: 0; transform: rotate(180deg); }
+.border:nth-child(1) { 
+  right: 0; 
+  bottom: 0; 
+}
+
+.border:nth-child(2) { 
+  left: 0; 
+  top: 0; 
+  transform: rotate(180deg); 
+}
 
 .Form {
   width: 100%;
@@ -142,14 +168,14 @@
   filter: drop-shadow(5px 5px 0px var(--fg));
 }
 
-span {
+.span {
   z-index: 1;
   position: relative;
   width: 100%;
   max-width: 500px;
 }
 
-span::before {
+.span::before {
   content: '';
   position: absolute;
   height: 100%;
@@ -162,7 +188,7 @@ span::before {
   transition: all 0.2s ease;
 }
 
-input {
+.input {
   height: 55px;
   width: 100%;
   font-family: 'Poppins', sans-serif;
@@ -177,11 +203,11 @@ input {
   transition: transform 0.2s ease;
 }
 
-input:focus {
+.input:focus {
   transform: translate(-2px, -2px);
 }
 
-input[type="submit"] {
+.input[type="submit"] {
   background-color: var(--pin);
   color: var(--fg);
   font-family: 'Santa';
@@ -191,12 +217,12 @@ input[type="submit"] {
   box-shadow: 0 4px 0 var(--fg);
 }
 
-input[type="submit"]:hover {
+.input[type="submit"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 0 var(--fg);
 }
 
-input[type="submit"]:active {
+.input[type="submit"]:active {
   transform: translateY(2px);
   box-shadow: 0 0px 0 var(--fg);
 }
@@ -218,11 +244,15 @@ input[type="submit"]:active {
   width: 60px;
   background-color: var(--fg);
   top: 50%;
-  /* transform: translateY(-50%); */
 }
 
-.or::before { left: 150px; }
-.or::after { right: 150px; }
+.or::before { 
+  left: 150px; 
+}
+
+.or::after { 
+  right: 150px; 
+}
 
 .plat {
   display: flex;
@@ -282,9 +312,24 @@ input[type="submit"]:active {
   transition: all 0.3s ease;
 }
 
-.user:first-child { background-color: var(--pi); left: 20%; z-index: 1; }
-.user:nth-child(2) { background-color: var(--p); left: 35%; z-index: 2; }
-.user:nth-child(3) { background-color: var(--pin); left: 50%; z-index: 3; }
+.user:first-child { 
+  background-color: var(--pi); 
+  left: 20%; 
+  z-index: 1; 
+}
+
+.user:nth-child(2) { 
+  background-color: var(--p); 
+  left: 35%; 
+  z-index: 2; 
+}
+
+.user:nth-child(3) { 
+  background-color: var(--pin); 
+  left: 50%; 
+  z-index: 3; 
+}
+
 .user:last-child {
   position: relative;
   left: 38%;
@@ -312,12 +357,23 @@ input[type="submit"]:active {
   animation: Msg 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.UserAlertSuccessContainer { background: var(--p); }
-.UserAlertFailContainer { background: #ff2323; }
+.UserAlertSuccessContainer { 
+  background: var(--p); 
+}
+
+.UserAlertFailContainer { 
+  background: #ff2323; 
+}
 
 @keyframes Msg {
-  from { transform: translateY(100px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from { 
+    transform: translateY(100px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
 }
 
 .UserAlertSuccess, .UserAlertFail {
@@ -326,11 +382,29 @@ input[type="submit"]:active {
   font-size: 18px;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 480px) {
-  .Form { gap: 20px; }
-  .or::before, .or::after { width: 40px; }
-  .or::before { left: -55px; }
-  .or::after { right: -55px; }
-  .title { margin-bottom: 10px; }
-  input[type="submit"] { font-size: 20px; }
+  .Form { 
+    gap: 20px; 
+  }
+  
+  .or::before, .or::after { 
+    width: 40px; 
+  }
+  
+  .or::before { 
+    left: -55px; 
+  }
+  
+  .or::after { 
+    right: -55px; 
+  }
+  
+  .title { 
+    margin-bottom: 10px; 
+  }
+  
+  .input[type="submit"] { 
+    font-size: 20px; 
+  }
 }

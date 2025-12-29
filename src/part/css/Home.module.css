@@ -18,6 +18,11 @@
   src: url('../../assets/font/FujiFantastic-Bold.otf');
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url('../../assets/font/Poppins-Light.ttf');
+}
+
 .HomeSection {
   height: 100vh;
   width: 100vw;
@@ -212,3 +217,4 @@
   width: 100%;
   align-items: center;
 }
+
