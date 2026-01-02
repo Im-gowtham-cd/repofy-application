@@ -5,6 +5,7 @@ import HomeStyle from './css/Home.module.css'
 export default function Home() {
   const { name } = useParams()
   const [createRoom, setCreateRoom] = useState(false)
+  const [joinRoom, setJoinRoom] = useState(false)
 
   const navigate = useNavigate()
 
@@ -20,9 +21,9 @@ export default function Home() {
             <div className={HomeStyle.createroomcontainer}>
               <h1 className={HomeStyle.RoomTitle}>Create Room</h1>
               <div className={HomeStyle.RoomContent}>
-                  <form action="">
-                    
-                  </form>
+                <form action="">
+
+                </form>
               </div>
               <ul className={HomeStyle.RoomSubmit}>
                 <button className={HomeStyle.CloseButton} onClick={() => setCreateRoom(false)}>Create</button>
@@ -40,10 +41,23 @@ export default function Home() {
           <h1 className={HomeStyle.navTitle}>Repofy</h1>
           <ul className={HomeStyle.navLink}>
             <li>Room</li>
-            <ul className={HomeStyle.RoomLink}>
-              <button onClick={() => setCreateRoom(true)}>Create</button>
-              <button>Join</button>
-            </ul>
+
+            {
+              joinRoom ? (
+                <form className={HomeStyle.joinroom}>
+                  {/* <p className={HomeStyle.joinroomtext}></p> */}
+                  <input type="text" name="" id="" placeholder="Enter Room Id" />
+                  <button onClick={() => setJoinRoom(false)} > Join </button>
+                  <button onClick={() => setJoinRoom(false)}> Close </button>
+                </form>
+              ) : (
+                <ul className={HomeStyle.RoomLink}>
+                  <button onClick={() => setCreateRoom(true)}>Create</button>
+                  <button onClick={() => setJoinRoom(true)}> Join</button>
+                </ul>
+              )
+            }
+
           </ul>
           <button className={HomeStyle.Logout} onClick={Logout}>LogOut</button>
         </nav>
