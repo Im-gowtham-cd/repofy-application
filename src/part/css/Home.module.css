@@ -267,7 +267,6 @@
     button:nth-child(3){
     /* background-color: var(--pin); */
     border: 2px solid var(--pin);
-    /* border: none; */
     font-family: 'Santa';
     background: transparent;
     color: var(--pin);
