@@ -40,6 +40,7 @@ export default function Home() {
         <nav className={HomeStyle.Nav}>
           <h1 className={HomeStyle.navTitle}>Repofy</h1>
           <ul className={HomeStyle.navLink}>
+            <p className={HomeStyle.navTitleDes}>Report and Classroom Manager</p>
             <li>Room</li>
 
             {
@@ -57,6 +58,12 @@ export default function Home() {
                 </ul>
               )
             }
+            <ul className={HomeStyle.navLinkSection}>
+              <li>Home</li>
+              <li>Dashboard</li>
+              <li></li>
+            </ul>
+
 
           </ul>
           <button className={HomeStyle.Logout} onClick={Logout}>LogOut</button>
