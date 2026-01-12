@@ -1,0 +1,91 @@
+.cursor {
+    --size: clamp(30px, 1vh, 60px);
+    width: var(--size);
+    height: var(--size);
+    position: fixed;
+    top: 10%;
+    left: 34%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    border-radius: 40vh;
+    background: var(--pin);
+    border: 3px solid var(--fg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+    transition: all ease-in-out;
+    /* opacity: 0; */
+    pointer-events: none;
+}
+
+
+.eyes {
+    position: absolute;
+    list-style: none;
+    height: 25%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 35%;
+    /* background-color: var(--fg); */
+    top: 30%;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li:nth-child(1) {
+        height: 80%;
+        width: 25%;
+        border-radius: 100%;
+        background: var(--fg);
+        z-index: 10001;
+        top: 0;
+        left: 0;
+    }
+
+    li:nth-child(2) {
+        height: 80%;
+        width: 25%;
+        border-radius: 100%;
+        background: var(--fg);
+        z-index: 10001;
+        top: 0;
+        left: 0;
+    }
+
+    li::before {
+        content: '';
+        position: relative;
+        height: 65%;
+        width: 65%;
+        border-radius: 50%;
+        background: var(--bgw);
+    }
+}
+
+.mouth {
+    height: 20%;
+    width: 60%;
+    background: var(--fg);
+    position: absolute;
+    z-index: 10001;
+    bottom: 15%;
+    border-radius: 0 0 100% 100%;
+}
+
+.mouthCircle {
+    position: absolute;
+    height: 10%;
+    z-index: 10001;
+    border-radius: 0 0 100% 100%;
+    width: 55%;
+    bottom: 22%;
+    background: var(--bgw);
+    /* border: 2px solid var(--fg); */
+}
