@@ -61,7 +61,8 @@ export default function Home() {
             <ul className={HomeStyle.navLinkSection}>
               <li>Home</li>
               <li>Dashboard</li>
-              <li></li>
+              <li>Billing</li>
+              <li>Help</li>
             </ul>
 
 

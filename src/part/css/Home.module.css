@@ -91,7 +91,7 @@
   list-style: none;
 }
 
-.navLink p:nth-child(1) {
+.navLink >p:nth-child(1) {
   width: 100%;
   font-family: 'Fyp';
   margin-top: 10%;
@@ -100,7 +100,7 @@
   color: var(--pin);
 }
 
-.navLink li:nth-child(2) {
+.navLink >li:nth-child(2) {
   width: 100%;
   font-family: 'Fyp';
   margin-top: 25%;
@@ -119,12 +119,12 @@
   gap: 10px;
 }
 
-.RoomLink button {
+.RoomLink > button {
   width: 35%;
   height: 40%;
 }
 
-.RoomLink button:nth-child(1) {
+.RoomLink > button:nth-child(1) {
   background-color: var(--pin);
   border: none;
   font-family: 'Fyp';
@@ -132,7 +132,7 @@
   color: var(--p);
 }
 
-.RoomLink button:nth-child(2) {
+.RoomLink > button:nth-child(2) {
   border: 3px solid var(--pin);
   /* border: none; */
   background: transparent;
@@ -285,6 +285,21 @@
   }
 }
 
-/* .navLinkSection{
+.navLinkSection{
+  width: 100%;
+  height: 40%;
+  /* border: 1px solid var(--bgw); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  gap: 30px;
+  margin-top: 5%;
+}
 
-} */
+.navLinkSection li{
+  font-size: 25px;
+  font-family: 'Santa';
+  color: var(--pin);
+}
