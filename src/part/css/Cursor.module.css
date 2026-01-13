@@ -1,26 +1,67 @@
+@property --size1 {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .cursor {
     --size: clamp(30px, 1vh, 60px);
     width: var(--size);
     height: var(--size);
     position: fixed;
-    top: 10%;
-    left: 34%;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    border-radius: 40vh;
-    background: var(--pin);
-    border: 3px solid var(--fg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: none;
-    transition: all ease-in-out;
-    /* opacity: 0; */
     pointer-events: none;
+    z-index: 10000;
+    border-radius: 50%;
+    border: 1.2px solid var(--fg);
+    background: linear-gradient(var(--size1), var(--pin), var(--pi), var(--p));
+    animation: cursor 1.4s linear infinite;
+    /* box-shadow: 0px 0px 2px 1px  var(--pin); */
+    /* opacity: 1; */
 }
 
+@keyframes cursor {
+    from {
+        --size1: 0deg;
+    }
+
+    to {
+        --size1: 360deg;
+    }
+}
+
+.sparks {
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: 150%;
+    /* border: 1px solid var(--fg); */
+    /* transform: rotate(20Deg); */
+
+    span {
+        height: 100%;
+        font-family: 'Fyp';
+        display: flex;
+        width: fit-content;
+        padding: 0 10px;
+        background: var(--pi);
+        font-size: 20px;
+        color: var(--bgw);
+        justify-content: center;
+        align-items: center;
+        /* position: fixed; */
+        /* position: relative; */
+    }
+}
+
+.sparks::after {
+    content: '';
+    height: 10%;
+    width: 30%;
+    background: linear-gradient(var(--size1), var(--pin), var(--p));
+    position: absolute;
+    top: 45%;
+    left: -25%;
+}
 
 .eyes {
     position: absolute;
@@ -85,7 +126,7 @@
     z-index: 10001;
     border-radius: 0 0 100% 100%;
     width: 55%;
-    bottom: 22%;
+    bottom: 21%;
     background: var(--bgw);
     /* border: 2px solid var(--fg); */
 }
