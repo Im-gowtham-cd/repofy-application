@@ -91,7 +91,7 @@
   list-style: none;
 }
 
-.navLink >p:nth-child(1) {
+.navLink>p:nth-child(1) {
   width: 100%;
   font-family: 'Fyp';
   margin-top: 10%;
@@ -100,7 +100,7 @@
   color: var(--pin);
 }
 
-.navLink >li:nth-child(2) {
+.navLink>li:nth-child(2) {
   width: 100%;
   font-family: 'Fyp';
   margin-top: 25%;
@@ -119,12 +119,12 @@
   gap: 10px;
 }
 
-.RoomLink > button {
+.RoomLink>button {
   width: 35%;
   height: 40%;
 }
 
-.RoomLink > button:nth-child(1) {
+.RoomLink>button:nth-child(1) {
   background-color: var(--pin);
   border: none;
   font-family: 'Fyp';
@@ -132,7 +132,7 @@
   color: var(--p);
 }
 
-.RoomLink > button:nth-child(2) {
+.RoomLink>button:nth-child(2) {
   border: 3px solid var(--pin);
   /* border: none; */
   background: transparent;
@@ -172,6 +172,7 @@
     opacity: 0.5;
     scale: 0.8;
   }
+
   to {
     opacity: 1;
     scale: 1;
@@ -180,7 +181,7 @@
 
 .CloseButton:nth-child(1) {
   /* border: 3px solid var(--pi); */
-  border: none; 
+  border: none;
   height: 55%;
   width: 7%;
   background: var(--pi);
@@ -216,14 +217,70 @@
   font-size: 100px;
 }
 
-.RoomContent{
+.RoomContent {
   height: 75%;
   border-bottom: 3px solid var(--pi);
-  border-top:3px solid var(--pi);
+  border-top: 3px solid var(--pi);
   width: 100%;
+
 }
 
-.RoomSubmit{
+.RoomContent>form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.RoomContent>form>span {
+  height: 25%;
+  width: 50%;
+  /* border: 1px solid var(--pin); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  input {
+    outline: none;
+    height: 25%;
+    width: 75%;
+    border: none;
+    background: transparent;
+    border: 3px solid var(--pi);
+    font-family: 'Poppins';
+    color: var(--pi);
+    font-size: larger;
+    font-weight: 800;
+    /* padding-left: 1%; */
+  }
+
+  input::placeholder{
+    padding-left: 50%;
+  }
+}
+
+.RoomContent>form>span:nth-child(1):after {
+  position: absolute;
+  content: 'Room ID';
+  height: fit-content;
+  width: fit-content;
+  padding: 13px 20px;
+  /* z-index: 100000000; */
+  background: var(--pi);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 12.5%;
+  top: 37%;
+  font-family: 'Fyp';
+  color: var(--bgw);
+  font-size: larger;
+  font-weight: 800;
+}
+
+.RoomSubmit {
   display: flex;
   justify-content: flex-end;
   height: 10%;
@@ -231,7 +288,7 @@
   align-items: center;
 }
 
-.joinroom{
+.joinroom {
   height: 15%;
   width: 100%;
   /* border: 1px solid var(--fg); */
@@ -242,7 +299,7 @@
   transition: all .3s ease-in-out;
   gap: 20px;
 
-  input{
+  input {
     height: 40%;
     flex-basis: 75%;
     border: none;
@@ -256,16 +313,16 @@
     outline: none;
   }
 
-  input::placeholder{
+  input::placeholder {
     color: var(--pin);
   }
 
-  button{
+  button {
     height: 40%;
     width: 35%;
   }
 
-  button:nth-child(2){
+  button:nth-child(2) {
     background-color: var(--pin);
     border: none;
     font-family: 'Santa';
@@ -274,7 +331,7 @@
     letter-spacing: 2px;
   }
 
-    button:nth-child(3){
+  button:nth-child(3) {
     /* background-color: var(--pin); */
     border: 2px solid var(--pin);
     font-family: 'Santa';
@@ -285,7 +342,7 @@
   }
 }
 
-.navLinkSection{
+.navLinkSection {
   width: 100%;
   height: 40%;
   /* border: 1px solid var(--bgw); */
@@ -298,7 +355,7 @@
   margin-top: 5%;
 }
 
-.navLinkSection li{
+.navLinkSection li {
   font-size: 25px;
   font-family: 'Fyp';
   /* border: 1px solid var(--bgw); */
