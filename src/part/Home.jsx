@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import HomeStyle from './css/Home.module.css'
+import Cursor from './Cursor'
 
 export default function Home() {
   const { name } = useParams()

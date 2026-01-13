@@ -10,7 +10,7 @@ export default function Cursor() {
             let y = e.clientY - cursor.offsetHeight / 2;
             let x = e.clientX - cursor.offsetWidth / 2;
             cursor.style.transform = `translate(${x}px , ${y}px)`;
-            repofy.style.transform = `rotate(${y}Deg)`;
+            // repofy.style.left = `${y/10}%`;
         }
 
         window.addEventListener('mousemove', mouse);

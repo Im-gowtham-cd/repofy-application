@@ -291,7 +291,7 @@
   /* border: 1px solid var(--bgw); */
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   list-style: none;
   gap: 30px;
@@ -301,5 +301,7 @@
 .navLinkSection li{
   font-size: 25px;
   font-family: 'Fyp';
+  /* border: 1px solid var(--bgw); */
+  padding-left: 14%;
   color: var(--pin);
 }
