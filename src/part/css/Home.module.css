@@ -229,13 +229,13 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .RoomContent>form>span {
-  height: 25%;
-  width: 50%;
+  height: 15%;
+  width: 30%;
   /* border: 1px solid var(--pin); */
   display: flex;
   justify-content: center;
@@ -245,39 +245,51 @@
   input {
     outline: none;
     height: 25%;
-    width: 75%;
+    width:100%;
     border: none;
+    text-align: center;
     background: transparent;
-    border: 3px solid var(--pi);
+    border-bottom: 3px solid var(--pi);
     font-family: 'Poppins';
     color: var(--pi);
     font-size: larger;
     font-weight: 800;
+    /* padding-left: 10%; */
     /* padding-left: 1%; */
   }
 
   input::placeholder{
-    padding-left: 50%;
+    color: var(--pi);
+    /* padding-left: 50%; */
   }
 }
 
-.RoomContent>form>span:nth-child(1):after {
-  position: absolute;
-  content: 'Room ID';
+.RoomContent>form>span::after {
+  position: absolute; 
+  /* content: 'Room ID'; */
   height: fit-content;
   width: fit-content;
-  padding: 13px 20px;
+  padding: 5px 20px;
   /* z-index: 100000000; */
   background: var(--pi);
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 12.5%;
-  top: 37%;
+  left: 0%;
+  border-radius: 20px 0;
+  top: 0%;
   font-family: 'Fyp';
   color: var(--bgw);
   font-size: larger;
   font-weight: 800;
+}
+
+.RoomContent>form>span:nth-child(1)::after {
+  content: 'ID';
+}
+
+.RoomContent>form>span:nth-child(2)::after {
+  content: 'Description';
 }
 
 .RoomSubmit {

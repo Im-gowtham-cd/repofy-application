@@ -10,7 +10,7 @@ export default function Cursor() {
             let y = e.clientY - cursor.offsetHeight / 2;
             let x = e.clientX - cursor.offsetWidth / 2;
             cursor.style.transform = `translate(${x}px , ${y}px)`;
-            // repofy.style.left = `${y/10}%`;
+            // repofy.style.color= `#ffd9${x}${y}`;
         }
 
         window.addEventListener('mousemove', mouse);
@@ -32,7 +32,7 @@ export default function Cursor() {
                 <span className={CursorStyle.mouthCircle}></span> */}
 
                 <div id="Repofy" className={CursorStyle.sparks}>
-                    <span>Repofy</span>
+                    <span id='Repofy'>Repofy</span>
                 </div>
             </div>
         </>
