@@ -47,6 +47,7 @@
         background: var(--pi);
         font-size: 20px;
         color: var(--bgw);
+        white-space: nowrap;
         border-radius: 0px 20px;
         justify-content: center;
         border: 2px solid var(--pin);

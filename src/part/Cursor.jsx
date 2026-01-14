@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import CursorStyle from './css/Cursor.module.css'
 
-export default function Cursor() {
+export default function Cursor({name}) {
 
     useEffect(() => {
         const cursor = document.getElementById("cursor");
@@ -31,8 +31,8 @@ export default function Cursor() {
                 <span className={CursorStyle.mouth}></span>
                 <span className={CursorStyle.mouthCircle}></span> */}
 
-                <div id="Repofy" className={CursorStyle.sparks}>
-                    <span id='Repofy'>Repofy</span>
+                <div className={CursorStyle.sparks}>
+                    <span id='Repofy'>{name}</span>
                 </div>
             </div>
         </>

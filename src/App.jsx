@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 export default function App() {
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/home/:name' element={<Home />} />

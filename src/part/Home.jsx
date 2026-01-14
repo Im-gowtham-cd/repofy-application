@@ -14,8 +14,11 @@ export default function Home() {
     navigate('/')
   }
 
+
   return (
     <>
+      <Cursor name={name} />
+
       {
         createRoom ? (
           <>
@@ -23,8 +26,8 @@ export default function Home() {
               <h1 className={HomeStyle.RoomTitle}>Create Room</h1>
               <div className={HomeStyle.RoomContent}>
                 <form action="">
-                    <span><input type="text" name="" id="" /></span>
-                    <span><input type="text" name="" id="" /></span>
+                  <span><input type="text" name="" id="" /></span>
+                  <span><input type="text" name="" id="" /></span>
                 </form>
               </div>
               <ul className={HomeStyle.RoomSubmit}>

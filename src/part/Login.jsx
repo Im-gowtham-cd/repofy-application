@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LoginStyle from './css/Login.module.css'
+import Cursor from './Cursor'
 // import Home from './Home';
 
 import { useNavigate } from 'react-router-dom';
@@ -77,7 +78,7 @@ export default function Login() {
 
     try {
       const result = await fetch("https://repofybackend-production.up.railway.app/signup", {
-      // const result = await fetch("http://localhost:8080/signup", {
+        // const result = await fetch("http://localhost:8080/signup", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
@@ -111,21 +112,23 @@ export default function Login() {
   const items = ["Repofy", "Repofy", "Repofy", "Repofy", "Repofy"];
 
   // useEffect(() => {
-    const TotalUser = async () => {
-      try {
-        // const result = await fetch("http://localhost:8080/totaluser")
-        const result = await fetch("https://repofybackend-production.up.railway.app/totaluser")
-        setUser(await result.json())
-      } catch (err) {
-        console.error(err)
-      }
+  const TotalUser = async () => {
+    try {
+      // const result = await fetch("http://localhost:8080/totaluser")
+      const result = await fetch("https://repofybackend-production.up.railway.app/totaluser")
+      setUser(await result.json())
+    } catch (err) {
+      console.error(err)
     }
-    TotalUser()
+  }
+  TotalUser()
   // }, [])
 
 
   return (
     <>
+      <Cursor name={"Repofy"} />
+
       <div className={LoginStyle.loginForm}>
 
         {/* <img src={i1} alt="" className={LoginStyle.border} /> */}
@@ -179,7 +182,7 @@ export default function Login() {
           <form onSubmit={Register} className={LoginStyle.Form}>
             <span className={LoginStyle.span}><input type="text" name="name" id="" placeholder='Name' className={LoginStyle.input} onChange={dataEntry} required /></span>
             <span className={LoginStyle.span}><input type="email" name="email" id="" placeholder='Email' className={LoginStyle.input} onChange={dataEntry} required /></span>
-            <span className={LoginStyle.span}><input type="password" name="password" id="" placeholder='Password' className={LoginStyle.input} onChange={dataEntry} value={data.password} autoComplete='new-password'required /></span>
+            <span className={LoginStyle.span}><input type="password" name="password" id="" placeholder='Password' className={LoginStyle.input} onChange={dataEntry} value={data.password} autoComplete='new-password' required /></span>
             <span className={LoginStyle.span}><input type="submit" value="Sign Up" className={LoginStyle.input} /></span>
             <span className={LoginStyle.or}>Or</span>
             <div className={LoginStyle.plat}>
