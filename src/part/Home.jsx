@@ -28,6 +28,15 @@ export default function Home() {
                 <form action="">
                   <span><input type="text" name="" id="" /></span>
                   <span><input type="text" name="" id="" /></span>
+                  <span>
+                    <p>Do you want your room as public / private</p>
+                    <select name="" id="">
+                      <option value="Public"><p>Public</p></option>
+                      <option value="Private">Private</option>
+                    </select>
+                  </span>
+                  <span><input type="text" name="" id="" /></span>
+                  <span><input type="text" name="" id="" /></span>
                 </form>
               </div>
               <ul className={HomeStyle.RoomSubmit}>
